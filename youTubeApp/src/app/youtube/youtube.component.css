@@ -1,0 +1,47 @@
+.main {
+    width: 50%;
+    margin: 50px auto;
+}
+
+body {
+    background-color:gray
+  }
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: left;
+    pointer-events: none;
+    color: #aaa;
+}
+
+
+.vl {
+    border-left: 366px solid green;
+    height: 500px;
+
+  }
+
+  #scroll{
+    height: 600px;
+    overflow-y:auto;
+ }
+
+  .scrollbar {
+    margin-left: 30px;
+    float: left;
+    height: 300px;
+    width: 65px;
+    background: #fff;
+    overflow-y: scroll;
+    margin-bottom: 25px;
+    }
+    .force-overflow {
+    min-height: 450px;
+    }
+
+    
