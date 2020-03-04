@@ -1,0 +1,64 @@
+
+
+
+
+
+
+
+
+<div class="container-fluid"> 
+
+    
+      
+         <section class="mid_con">
+           <div class="container ">
+            <div class="row">
+              <div class="col-md-7"  style="padding-top:30px;">
+                <div *ngFor="let video of videos; let i = index;" >
+                  <div *ngIf="i==0">
+                    <div class="card border-0 shadow vh-50 cust_youtube_card1">
+                        <youtube-player videoId="{{video.id.videoId}}" suggestedQuality="highres"
+                        [height]="350"
+                        [width]="620"
+                        [startSeconds]="43"
+                        [endSeconds]="80"></youtube-player>
+                        <div class="card-body ">
+                        <h3 class="card-title mb-0">
+                        <a href="https://www.youtube.com/watch?v={{video.id.videoId}}">{{video.snippet.title}}
+                        </a></h3>
+                         <p class="card-text" >{{video.snippet.description}}</p> 
+                        </div>
+                   </div>
+                </div>
+            </div>
+          </div>
+  
+        <div  class="col-md-5" id="scrol" style="padding: 30px;">
+          <div *ngFor="let video of videos; let i = index;">
+            <div *ngIf="i<7">
+          <div class="card mb-3" style="max-width: 540px;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <a href="#"><img  (click)="change(video,i)" src="{{video.snippet.thumbnails.default.url}}" class="rounded float-left" alt="..."></a>
+          
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">TITLE:{{video.snippet.title}} </h5>
+                  <p class="card-text">{{video.snippet.description}}</p>
+                </div>
+              </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+       <hr>
+      </div>
+     </div>
+    </section>
+  </div>
+<div class="container">
+    <h1>vid works!</h1>
+</div>

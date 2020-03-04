@@ -1,0 +1,85 @@
+<!-- <div class="row" style="text-align: center;">
+    <img src="/assets/search.png" alt="Search Image"  style="width: 450px; height: 350;">
+    </div>
+    <div class="container">
+        <section>
+            <div class="container-fluid">
+              <div class="row" style="margin-top: 15px;">
+              <form class="form-inline">
+                 
+               <input type="text" style="padding-right:500px" size="72" class="form-control input-md" id="inlineFormInputName2" [(ngModel)]="youtubeForm" name="searchresult" placeholder="Search">
+               <button type="submit" style="margin-left:10px" class="btn btn-primary mb-2"(click)="onSubmit()">Search</button>
+                     
+              </form>
+              
+            
+           </div>
+            </div>
+          </section>
+          </div>
+    <br>
+    <nav style="padding-left: 120px;">
+        <a routerLink ="/link" routerLinkActive="active">Link</a> &nbsp;&nbsp;
+        <a routerLink ="/image" routerLinkActive="active">Images</a>&nbsp;&nbsp;
+        <a routerLink ="/video" routerLinkActive="active">Video</a>
+      </nav> -->
+<div class="container">
+<div class="row" style="margin-top:30px; ">
+      
+    <div class="col-md-7" >
+      <div *ngFor="let video of videos; let i = index;" >
+        <div *ngIf="i==0">
+          <div class="card border-0 shadow vh-30 cust_youtube_card1">
+              <youtube-player videoId="{{video.id.videoId}}" suggestedQuality="highres"
+              [height]="300"
+              [width]="652"
+              ></youtube-player>
+            
+            
+              <!-- <div class="card-body ">
+              <h5 class="card-title mb-0"></h5></div> -->
+                            
+              <div class="panel panel-default" style="width:unset">
+                  <div class="panel-body"><a href="https://www.youtube.com/watch?v={{video.videoId}}"></a><b>{{video.snippet.title}}</b></div>
+                  <div class="panel-body"><p class="card-text" >{{video.snippet.description}}</p></div>
+              </div>
+          </div>
+         </div>
+      </div>
+  </div>
+<div >
+ <div class="col-md-5" id="scroll">
+  <div *ngFor="let video of videos; let i = index">
+      <div *ngIf="i > 0"  >
+          <div class="card mb-8" style="max-width: 550px;">
+              <div class="row no-gutters">
+                  <div class="col-md-5">
+                  <!-- <youtube-player videoId={{video.videoId}} suggestedQuality="highres" [height]="200"
+                      [width]="280" [playerVars]="playerVars" style="margin-top: 1cm;">
+                  </youtube-player> -->
+                  <img  (click)="onVideoChange(video,i)" src="{{video.snippet.thumbnails.default.url}}" class="rounded float-left" 
+                      alt="..." style="width: 180px; height: 120px;">
+                  </div>
+                  <div class="col-md-5">
+                      <div class="card-body">
+                          <h6 class="card-title">
+                              <!-- <a style="text-align: center;" 
+                          href="https://www.youtube.com/watch?v={{video.videoId}} "(click)="onVideoChange(video,i)">{{video.title}} 
+                      </a> -->
+                   
+                      <p (click)="onVideoChange(video,i)" class="card-text" style="font-style: normal;font-size: 13px;">
+                          {{video.snippet.description}}</p>
+                      </h6>
+                   
+                  </div>
+              </div>
+          </div>
+      </div>
+      <hr>
+  </div>
+ 
+</div>
+</div>
+</div>
+</div>
+</div>

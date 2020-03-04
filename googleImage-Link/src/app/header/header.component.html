@@ -1,0 +1,40 @@
+<div class="row" style="text-align: center;">
+<img src="/assets/search.png" alt="Search Image"  style="width: 350px; height: 250;">
+</div>
+<div class="container">
+    <section>
+        <div class="container-fluid">
+          <div class="row" style="margin-top: 15px;">
+          <form class="form-inline">
+             
+           <input  type="text"  style="padding-right:480px; position: relative;left: 2px;" size="70" class="form-control input-md" id="inlineFormInputName2" [(ngModel)]="searchKey" name="searchKey" placeholder="Search">
+           <button type="submit" style="margin-left:20px" class="btn btn-primary mb-2"(click)="onSubmit()">Search</button>
+                 
+          </form>
+          
+      
+       </div>
+        </div>
+      </section>
+      </div>
+<br>
+<nav style="padding-left: 120px;">
+    <a routerLink ="/link" routerLinkActive="active">Link</a> &nbsp;&nbsp;
+    <a routerLink ="/image" routerLinkActive="active">Images</a>&nbsp;&nbsp;
+    <a routerLink ="/video" routerLinkActive="active">Video</a>
+  </nav>
+<br>
+
+
+  <!-- <div *ngFor="let img of images; let i = index">
+   
+    <div class="col-sm-3" >
+        <br>
+  
+    <div class="row" style ="width: 250px; height: 125px;">  
+    <a href="{{img.links.html}}"><img src="{{img.urls.thumb}}" 
+        alt="..." style="image-rendering:pixelated" ></a>
+      <div style="clear:both"><br>
+  </div>
+</div>
+    </div> -->

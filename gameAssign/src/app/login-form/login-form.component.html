@@ -1,0 +1,47 @@
+<div class="container-fluid">
+<h1> User Form</h1>
+
+<form>
+  <div class="form-group">
+    <label> Name</label>
+    <input type="text" class="form-control" id="">
+  </div>
+
+  <div class="form-group">
+<label for="">Email</label>
+
+<input type="email" class="form-control" id="">
+
+  </div>
+
+  <div class="form-group">
+
+    <select class="custom-select">
+      <option selected>I am intrested for</option>
+      <option *ngFor="let topic of topics">{{topic}}</option>
+    </select>
+    </div>
+
+    <label for="">Time Prefrence</label>
+
+    <div class="form-check">
+      <input type="radio" class="form-check-input" name="timePref" value="Morning">
+      <label class="form-check-label">Morning 8-10am</label>
+    </div>
+
+    <div class="form-check">
+      <input type="radio" class="form-check-input" name="timePref" value="Evening">
+      <label class="form-check-label">Evening 5-8pm</label>
+    </div>
+
+
+    <div class="form-check">
+
+      <input type="checkbox" class="form-check-input">
+      <label class="form-check-label">Send me Offer</label>
+    </div>
+
+</form>
+
+</div>
+

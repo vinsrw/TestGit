@@ -1,0 +1,41 @@
+
+
+ <link href="https://cdn.syncfusion.com/ej2/ej2-base/styles/material.css" rel="stylesheet" />
+<link href="https://cdn.syncfusion.com/ej2/ej2-buttons/styles/material.css" rel="stylesheet" />
+<link href="https://cdn.syncfusion.com/ej2/ej2-popups/styles/material.css" rel="stylesheet" />
+<link href="https://cdn.syncfusion.com/ej2/ej2-calendars/styles/material.css" rel="stylesheet" />
+
+<div class="container-fluid">
+
+
+  <nav class="navbar navbar-light" style="background-color:darkgray">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#"></a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Calender</a></li>
+        <li><a routerLink="/Day">Day</a></li>
+        <li><a routerLink="/Week">Week</a></li>
+        <li><a routerLink="/Month">Month</a></li>
+      </ul>
+    </div>
+  </nav>
+
+    <div class="conatiner">
+    <div class="row">
+      <div class="col-sm-3">
+         <ejs-calendar id=calendar [value]='value' [min]='minDate' [max]='maxDate'></ejs-calendar>
+      </div>
+      <div class="col-sm-9" >
+                <div class="container"style="width: auto;height: auto;">
+                  <router-outlet></router-outlet>
+        </div>
+      </div>
+      <!-- <div class="col-sm-3" style="background-color:lavender;">
+       col 3
+      </div> -->
+    </div>
+</div>
+</div>
+

@@ -1,0 +1,22 @@
+<form [formGroup]="forecastForm" (ngSubmit)="onSubmit()">
+    <input type="text" formControlName="forecastCity" placeholder="Enter city name" style="margin-left: 450px;">&nbsp;&nbsp;
+    <button>Go</button>
+    </form>
+<div class="contaniner">
+    
+    <div class="day" *ngFor="let item of cityForecast">
+        <div class="col-sm-2" id="#v1">
+        <h2 style="font-size: medium;text-align: center;color: rgb(220, 20, 120);">{{item.day | date:'y MMMM EEEE-d'}}</h2>
+        <div class="icon" style="background-color: aqua;text-align: center;">
+            <!-- <img src="http://openweathermap.org/img/wn/04d@2x.png"> -->
+            <img src="https://openweathermap.org/img/wn/{{item.icon}}.png">
+            <!-- <img src= "https://img1.niftyimages.com/7/h6rh/p6rh?ZIP=10001&txt=Michael/{{item.icon}}.png"> -->
+        </div>
+        <div class="temp">
+            <h3 style="font-size: medium; color: red;text-align: center">Max-Temp: {{item.tempMax}}&deg;</h3>
+            <h3 style="font-size: medium; color: red;text-align: center">Min-Temp: {{item.tempMin}}&deg;</h3>
+        </div>
+    </div>
+</div>
+
+ 

@@ -1,0 +1,15 @@
+<p>radio-button-ng-if works!</p>
+
+<h2>Ng If</h2>
+<input  type="radio" name="radio1" (click)="changeValue(true)">True
+<input type="radio" name="radio1" (click)="changeValue(false)">False
+
+<div *ngIf="isValid;   else elseblock">
+    This is valid data
+</div>
+<ng-template #elseblock>
+    <div>
+        This is not valid data
+    </div>
+</ng-template>
+

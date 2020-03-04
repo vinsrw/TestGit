@@ -1,0 +1,66 @@
+
+<app-login-form></app-login-form>
+
+ <!-- <app-collborators></app-collborators> -->
+<!-- <nav class="navbar navbar-default" style="width: 20;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a href="#" ><h1>Collabedit</h1></a>
+      <p style="color: ivory;">Simple Collaborative text</p>
+    </div>
+    <div class="text-right mb-3">
+      <a href="#" class="btn btn-primary" style="margin-top: 20px;">Login</a>
+  </div>
+    </div>
+</nav>
+
+<div class="col-md-10">
+
+<app-editor></app-editor>
+
+</div>
+<div class="col-md-10">
+<app-useful-link></app-useful-link>
+</div>
+
+<div class="col-md-10">
+  <app-people-talk></app-people-talk>
+  </div> -->
+
+  <router-outlet></router-outlet>
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h3>Bind it!</h3>
+      <ol>
+        <li>Create three new components: GameControl, Odd and Even</li>
+        <li>The GameControl Component should have buttons to start and stop the game</li>
+        <li>When starting the game, an event (holding a incrementing number) should get emitted each second (ref = setInterval())</li>
+        <li>The event should be listenable from outside the component</li>
+        <li>When stopping the game, no more events should get emitted (clearInterval(ref))</li>
+        <li>A new Odd component should get created for every odd number emitted, the same should happen for the Even Component (on even numbers)</li>
+        <li>Simply output Odd - NUMBER or Even - NUMBER in the two components</li>
+        <li>Style the element (e.g. paragraph) holding your output text differently in both components</li>
+      </ol>
+    </div>
+  </div>
+  </div>
+<div class="row">
+  <div class="col-xs-12">
+    <app-game-control (intervalFired) = "onIntervalFired($event)"></app-game-control>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <app-odd *ngFor="let oddNumber of oddNumbers" [number] = "oddNumber"></app-odd>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <app-even *ngFor="let evenNumber of evenNumbers" [number] = "evenNumber"></app-even>
+  </div>
+</div>
+
+<router-outlet></router-outlet> -->

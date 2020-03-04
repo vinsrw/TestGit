@@ -1,0 +1,13 @@
+div#header {
+    padding: 10px;
+    color: black
+
+  }
+
+#scrol{
+    height: 500px;
+    overflow-y: scroll;
+}
+
+
+ 

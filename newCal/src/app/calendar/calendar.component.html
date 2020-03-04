@@ -1,0 +1,22 @@
+<div class="container-fluid">
+  <div class="row">
+    <div  class="col-sm-3" style="padding-top: 1.5cm;">
+      <ejs-calendar id=calendar [value]='value' [min]='minDate' [max]='maxDate' > </ejs-calendar >
+    </div>
+  <div class="col-sm-7">
+<full-calendar #calendar
+(dayRender)="dayRender($event)"
+[header]="{
+  left: 'title',
+  center: 'dayGridMonth, dayGridWeek, dayGridDay',
+  right: 'today prev,next'
+
+}"
+
+[events] = "calendarEvents"
+[plugins]="calendarPlugins">
+
+</full-calendar>
+
+</div>
+</div>

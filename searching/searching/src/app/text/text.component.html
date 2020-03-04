@@ -1,0 +1,18 @@
+
+    <!-- for links -->
+    <div class="container">
+      <div class="row" style="padding-top:50px; ">
+      <div  class="column ">
+        <div *ngFor="let text of texts; let i = index;">
+           <div class="card mb-3" style="max-width: 540px;">
+                <a href="{{text.url}}"><p>{{text.title}}</p></a>
+                <p class="text">{{text.snippet}}</p>
+           </div>
+         </div>
+        </div>
+      </div>
+    </div>
+    
+
+
+   

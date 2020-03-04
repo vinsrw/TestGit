@@ -1,0 +1,23 @@
+
+
+<div class="container">
+
+    <h1>logos works!</h1>
+</div>
+
+
+  <div class="container">
+    <div class="row">
+    <div class="column">
+      
+      <div *ngFor="let item of images;let i=index;">
+      <div id="ab" class="card" style="width: 18rem;">
+        <img class="card-img-top" [src]="item.urls.thumb" alt="Card image cap">
+        <div class="card-body">
+          <h6 class="card-title">{{item.alt_description}}</h6>
+        </div>
+      </div>
+      </div>
+    </div>
+    </div>
+  </div>

@@ -1,0 +1,37 @@
+<!-- <div class="row" style="text-align: center;">
+    <img src="/assets/search.png" alt="Search Image"  style="width: 450px; height: 350;">
+    </div>
+    <div class="container">
+        <section>
+            <div class="container-fluid">
+              <div class="row" style="margin-top: 15px;">
+              <form class="form-inline">
+                 
+               <input type="text" style="padding-right:500px" size="72" class="form-control input-md" id="inlineFormInputName2" [(ngModel)]="searchKey" name="searchresult" placeholder="Search">
+               <button type="submit" style="margin-left:10px" class="btn btn-primary mb-2"(click)="onSubmit()">Search</button>
+                     
+              </form>
+              
+          
+           </div>
+            </div>
+          </section>
+          </div>
+    <br>
+    <nav style="padding-left: 120px;">
+        <a routerLink ="/link" routerLinkActive="active">Link</a> &nbsp;&nbsp;
+        <a routerLink ="/image" routerLinkActive="active">Images</a>&nbsp;&nbsp;
+        <a routerLink ="/video" routerLinkActive="active">Video</a>
+      </nav>
+    <br> -->
+
+
+<div *ngFor="let link of links; let i = index">
+    <div *ngIf="i >= 0" style="padding-left: 35px;" >
+  <b>  {{link.title}}</b> &nbsp;&nbsp;<a href="{{link.url}}">{{link.title}}</a><br>
+    {{link.snippet}} 
+   
+    <hr>
+    </div>
+    
+    </div>
